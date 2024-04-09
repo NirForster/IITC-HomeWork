@@ -1,0 +1,4 @@
+איך לעדכן רפוזיטורי:
+git add -A 
+GIT COMMIT -M וקישור
+git push  
