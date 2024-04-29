@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+#Instructions {
+  color: #666;
+}
+
+input_buttons {
+  display: flex;
+  flex: auto;
+}
+
+.numbers {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  font-size: 24px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.numbers:hover {
+  background-color: #f0f0f0;
+}
+
+#guessButton,
+#resetButton {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#guessButton:disabled,
+#resetButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.previousGuesses {
+  margin-top: 20px;
+}
+
+.previousGuess {
+  margin-bottom: 10px;
+}
+
+.previousGuess p {
+  margin: 0;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Simple Calculator</title>
+    <link rel="stylesheet" href="online_calculator.css" />
+  </head>
+  <body>
+    <div id="board">
+      <div id="inputDiv">
+        <button id="clear_Button" onclick="ClearInput()">CE</button>
+        <p id="Input"></p>
+      </div>
+      <!-- numbers buttons: -->
+      <div id="buttons">
+        <div id="numbers_buttons">
+          <button onclick="appendToInput(7)"class="round_button grey_background">7</button>
+          <button onclick="appendToInput(8)"class="round_button grey_background">8</button>
+          <button onclick="appendToInput(9)"class="round_button grey_background">9</button>
+          <button onclick="appendToInput(4)"class="round_button grey_background">4</button>
+          <button onclick="appendToInput(5)"class="round_button grey_background">5</button>
+          <button onclick="appendToInput(6)"class="round_button grey_background">6</button>
+          <button onclick="appendToInput(1)"class="round_button grey_background">1</button>
+          <button onclick="appendToInput(2)"class="round_button grey_background">2</button>
+          <button onclick="appendToInput(3)"class="round_button grey_background">3</button>
+          <button onclick="appendToInput(0)"class="round_button grey_background">0</button>
+          <button onclick="appendToInput('.')"class="round_button grey_background">.</button>
+          <button onclick="performMathOperation()"class="round_button green_background">=</button>
+        </div>
+        <!-- operation buttons: -->
+        <div id="op_buttons">
+          <button onclick="MathOperation('+')"class="round_button green_background">+</button>
+          <button onclick="MathOperation('-')"class="round_button green_background">-</button>
+          <button onclick="MathOperation('/')"class="round_button green_background">/</button>
+          <button onclick="MathOperation('*')"class="round_button green_background">*</button>
+        </div>
+      </div>
+    </div>
+    <script src="online_calculator.js"></script>
+  </body>
+</html>

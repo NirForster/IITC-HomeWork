@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  #board {
+    display: flex;
+    flex-direction: column;
+    background-color: #a8a8a8;
+    width: 286px;
+    height: 332px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px solid black;
+  }
+  
+  #Input {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 25px;
+  }
+  
+  #inputDiv {
+    display: flex;
+    align-items: center;
+    background-color: #ddfcff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    height: 15%;
+  }
+  
+  #buttons {
+    display: flex;
+  }
+  
+  #numbers_buttons {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: #eeeeee;
+  }
+  
+  #op_buttons {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #eeeeee;
+  }
+  
+  #numbers_buttons .round_button:hover {
+    background-color: #FEE08A;
+    border: 3px solid orange;
+  }
+  
+  .green_background{
+    background-color: #02ca00;
+  }
+  
+  .grey_background{
+    background-color: #cbd6fe;
+  }
+  
+  .round_button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    border: 3px solid rgb(159, 155, 155);
+    cursor: pointer;
+  }
+  
+  #clear_Button {
+    border: 2px solid hsl(0, 100%, 66%);
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #feb191;
+    cursor: pointer;
+    height: 100%;
+  }
+  
+  #clear_Button:hover {
+    background-color: red;
+  }
