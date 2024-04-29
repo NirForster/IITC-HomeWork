@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulls And Cows</title>
+    <link rel="stylesheet" href="BullsAndCows.css" />
+  </head>
+  <body class="body1">
+    <div class="instruction and introduction">
+      <!-- instruction and introduction -->
+      <h1 id="header">Lets play Bulls And Cows!</h1>
+      <p style="font-size: large; font-family: fantasy;" id="Instructions">
+        <span style="color: hsl(272, 78%, 55%);">Discover the hidden code!</span>
+        <div>Bulls = correct code, correct position.</div>
+        <div>Cows = correct code, wrong position.</div>
+      </p>
+    </div>
+    <h5>Good luck!</h5>
+
+    <!-- Input Field: -->
+    <!-- Input Field: -->
+    <div class="input_buttons">
+      <button onclick="plusOneToCurrent('input1')" id="input1" class="numbers">
+        0
+      </button>
+      <button onclick="plusOneToCurrent('input2')" id="input2" class="numbers">
+        1
+      </button>
+      <button onclick="plusOneToCurrent('input3')" id="input3" class="numbers">
+        2
+      </button>
+      <button onclick="plusOneToCurrent('input4')" id="input4" class="numbers">
+        3
+      </button>
+    </div>
+
+    <!-- Guess Button: -->
+    <button id="guessButton" onclick="checkForWin()">Guess</button>
+
+    <!-- Reset Button -->
+    <button onclick="reset()">New game</button>
+
+    <!-- Message for duplicate numbers -->
+    <p id="duplicateMessage" style="color: red"></p>
+
+    <!-- Result Display Area: -->
+    <p id="Bulls"></p>
+    <p id="Cows"></p>
+    <!-- display previous guesses: -->
+    <div id="previousGuesses"></div>
+    <h3 id="test"></h3>
+
+    <script src="BullsAndCows.js"></script>
+  </body>
+</html>
