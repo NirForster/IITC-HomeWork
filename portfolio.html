@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Days+One&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <div class="topNavBar">
+      <div class="linkContainer">
+        <li><a href="#aboutMeCard">ABOUT ME </a></li>
+        <li><a href="#projectsCard">PROJECTS </a></li>
+        <li><a href="#contactCard">CONTACT ME</a></li>
+      </div>
+    </div>
+    <div class="introductionCard">
+      <div class="introduction">
+        <img src="rob round pic.jpeg" alt="rob's first pic" />
+        <h1>Hi! I'm Rob! I teach people how to code and make websites.</h1>
+      </div>
+    </div>
+
+    <div id="aboutMeCard" class="aboutMe">
+      <h2>About me</h2>
+      <div class="aboutMeContent">
+        <img src="rob round pic.jpeg" alt="rob's second pic" />
+        <div class="aboutMeParagraphs">
+          <p>
+            Almost a decade ago I was busy teaching math to teenagers at three
+            schools in London and Cambridge. Since I’m a bit of a coding geek, I
+            also built websites on the side for friends and family. I soon
+            learned that web development was a very lucrative career choice, so
+            I gave up my successful (and sometimes stressful) job as a teacher
+            to build websites. Today, I couldn’t be happier with that decision.
+          </p>
+          <p>
+            After building websites for about seven years, I noticed a lot of
+            people struggling to learn how to code. I wanted others to have the
+            same freedoms that I enjoyed, so I started teaching web development
+          </p>
+          <p>
+            I'm familiar with HTML5, CSS3, JavaScript, PHP7 and MySQL. Checkout
+            some of the projects I've done below.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="projectsCard">
+      <div class="Projects">
+        <h2>Projects</h2>
+        <div class="earthProject">
+          <div class="content">
+            <h3 class="project-name">Earth Facts</h3>
+            <p>A HTML project about some facts about the earth.</p>
+
+            <a
+              class="button"
+              href="https://completewebdevelopercourse.com/coursecontent3/1-html/htmlproject.html"
+              target="_bank"
+              >View Project</a
+            >
+          </div>
+        </div>
+
+        <div class="bbcProject">
+          <div class="content">
+            <h3 class="project-name">BBC News Clone</h3>
+            <p>
+              This project is a clone of the BBC news website from the Web Dev
+              2.0 Course.
+            </p>
+
+            <a
+              class="button"
+              href="https://eco-cdn.co.uk/webdeveloper2.0/content/2-css/bbc.html"
+              target="_bank"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contactCard" class="contact">
+      <h2>Contact</h2>
+      <p>Use this form to get in touch. I would love to hear from you!</p>
+
+      <form class="contact-form">
+        <div class="contact-details">
+          <label for="name">Name</label>
+          <input type="text" id="yourname" placeholder="Yourname" />
+
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            placeholder="Reason for your message"
+          />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Your email address" />
+        </div>
+        <div class="message">
+          <label for="msg">Message</label>
+          <textarea id="msg" rows="15"></textarea>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <div class="buttomNavBar">
+        <div class="copyright">This site &copy; 2022 Rob Percival</div>
+        <div class="social">
+          <a href="https://www.facebook.com/rpcodestars"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com/techedrob"
+            ><i class="fa fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
