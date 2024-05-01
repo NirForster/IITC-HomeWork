@@ -2,12 +2,11 @@ let Bulls = 0;
 let Cows = 0;
 let currentSecretCode = generateRandomSecretCode(); // Array to store the answer (the secret code)
 let guess = [
-  // Array to store current guesses
   parseInt(document.getElementById("input1").textContent),
   parseInt(document.getElementById("input2").textContent),
   parseInt(document.getElementById("input3").textContent),
   parseInt(document.getElementById("input4").textContent),
-];
+]; // Array to store current guesses
 let previousGuesses = []; // Array to store previous guesses
 
 function generateRandomSecretCode() {
@@ -29,7 +28,7 @@ function generateRandomSecretCode() {
 
   return secretCode;
 }
-console.log(generateRandomSecretCode());
+console.log(currentSecretCode);
 
 function plusOneToCurrent(buttonId) {
   // get the current value of the button
@@ -72,31 +71,55 @@ function checkForDuplicates() {
   return false;
 }
 
+let isNameEntered = false;
+let instructions = (document.getElementById("Instructions").style =
+  "display: none"); //do not the display the instructions
+
+function Enable() {
+  document.getElementById("guessButton").disabled = false; // Enable the Guess button
+  isNameEntered = true; // Set the flag to indicate that the user has entered their name
+
+  const nameInput = document.getElementById("nameInput");
+  const name = nameInput.value.trim();
+  const greetingMessage = document.createElement("p");
+  greetingMessage.textContent = `Hello, ${name}!`;
+  document.querySelector(".nameInput").appendChild(greetingMessage);
+  instructions = document.getElementById("Instructions").style = "display"; //display the instruction
+
+}
+
+// Initially disable the Guess button
+document.getElementById("guessButton").disabled = true;
+
+// Function to check if the user has entered their name and enable the Guess button accordingly
+function checkAndEnableGuessButton() {
+  if (isNameEntered) {
+    document.getElementById("guessButton").disabled = false; // Enable the Guess button
+  } else {
+    document.getElementById("guessButton").disabled = true; // Disable the Guess button
+  }
+}
+
+// Call checkAndEnableGuessButton() to initially set the state of the Guess button
+checkAndEnableGuessButton();
+
 function checkForWin() {
   if (!checkForDuplicates(guess)) {
     Bulls = 0;
     Cows = 0;
 
-    // Array to store the user's guess:
-    let userGuess = [
-      parseInt(document.getElementById("input1").textContent),
-      parseInt(document.getElementById("input2").textContent),
-      parseInt(document.getElementById("input3").textContent),
-      parseInt(document.getElementById("input4").textContent),
-    ];
-
     //check for bulls or cows:
     for (let i = 0; i < 4; i++) {
-      if (userGuess[i] === currentSecretCode[i]) {
+      if (guess[i] === currentSecretCode[i]) {
         Bulls++;
-      } else if (currentSecretCode.includes(userGuess[i])) {
+      } else if (currentSecretCode.includes(guess[i])) {
         Cows++;
       }
     }
 
     // Add current guess to previous guesses
     previousGuesses.push({
-      guess: userGuess.slice(),
+      guess: guess.slice(),
       bulls: Bulls,
       cows: Cows,
     });
@@ -154,15 +177,3 @@ function reset() {
   // Generate a new secret code
   currentSecretCode = generateRandomSecretCode();
 }
-
-// Check for duplicates in the guess and enable/disable the Guess button accordingly
-// let guessButton = document.getElementById("guessButton");
-// if (checkForDuplicates(guess)) {
-//   guessButton.disabled = true; // Disable the Guess button
-//   duplicateMessage.textContent = "Please ensure each number is unique.";
-//   duplicateMessage.style.display = "block";
-// } else {
-//   guessButton.disabled = false; // Enable the Guess button
-//   duplicateMessage.textContent = ""; // Clear the message
-//   duplicateMessage.style.display = "none"; // Hide the message
-// }
