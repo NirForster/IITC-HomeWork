@@ -143,6 +143,8 @@ function displayPreviousGuesses() {
   previousGuessesDisplay.innerHTML = ""; // Clear previous guesses display
 
   // Loop through previousGuesses array and display each guess
+
+
   previousGuesses.forEach((guessInfo, index) => {
     let guess = guessInfo.guess;
     let bulls = guessInfo.bulls;
