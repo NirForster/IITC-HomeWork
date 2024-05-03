@@ -106,13 +106,21 @@
       //   userNumber--;
       // } while (userNumber > 0);
       // alert("Factorial: " + factorial);
-      let max, min, num = prompt("enter a number")
-      let counter = 1
+
+      let max, min, num = 0
+      let counter = 0
       do {
-        i++
-        max = 
-        min = 
-      } while (i<=5);
+        num = prompt("enter a number")
+        counter++
+        if (num>max){
+        max = num }
+        else if (num>min)
+        min = num
+      } while (counter<5);
+      alert(max)
+      alert(min)
+
+      
 
 
     </script>
