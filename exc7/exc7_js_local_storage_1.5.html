@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <button class="button-29" onclick="incrementCount1()">Increment this</button>
+  <button class="button-85" onclick="incrementCount2()">Increment that</button>
+  <p id="countDisplay1">Count: 0</p>
+  <p id="countDisplay2">Count: 0</p>
+  <body>
+    <script>
+      // js_local_storage_1.5:
+      // Check if count value exists in local storage, if not, initialize it to 0
+      let count1 = localStorage.getItem("count1")
+        ? parseInt(localStorage.getItem("count1"))
+        : 0;
+      let count2 = localStorage.getItem("count2")
+        ? parseInt(localStorage.getItem("count2"))
+        : 0;
+
+      // Function to increment count and update display
+      function incrementCount1() {
+        // Increment count
+        count1++;
+
+        // Update the count display
+        document.getElementById(
+          "countDisplay1"
+        ).innerText = `Count1: ${count1}`;
+
+        // Save the updated count value to local storage
+        localStorage.setItem("count1", count1);
+      }
+
+      function incrementCount2() {
+        count2++;
+
+        localStorage.setItem("count2", count2);
+
+        document.getElementById(
+          "countDisplay2"
+        ).innerText = `Count2: ${count2}`;
+      }
+
+      // Display the initial count value
+      document.getElementById("countDisplay1").innerText = `Count1: ${count1}`;
+      document.getElementById("countDisplay2").innerText = `Count2: ${count2}`;
+
+      // localStorage.removeItem('count', count)
+      //   localStorage.clear()
+
+
+    //   js_local_storage_2.5:
+    
+
+    </script>
+  </body>
+</html>
