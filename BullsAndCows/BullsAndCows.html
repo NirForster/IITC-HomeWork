@@ -10,10 +10,10 @@
   <div class="instruction and introduction">
     <!-- instruction and introduction -->
     <h1 id="header">Welcom To Bulls And Cows!</h1>
+    <span class="font-style" id="nameParagraph">Please enter your name to start</span>
     <div class="nameInput">
-      <span>Please enter your name to start</span>
-      <input id="nameInput" type="text" placeholder="Enter your name">
-      <button id="submit" onclick="Enable()">submit</button>
+      <input class="classNameInput" id="nameInput" type="text" placeholder="Enter your name">
+      <button id="submit" class="submit" onclick="Enable()">submit</button>
     </div>
     <div style="font-size: large; font-family: fantasy;" class="Instructions" id="Instructions">
       <span style="color: hsl(272, 78%, 55%);">Discover the hidden code!</span>
@@ -32,10 +32,10 @@
   </div>
 
   <!-- Guess Button: -->
-  <button id="guessButton" onclick="checkForWin()">Guess</button>
+  <button class="" role="button" id="guessButton" onclick="checkForWin()">Guess</button>
 
   <!-- Reset Button -->
-  <button onclick="reset()">New game</button>
+  <button class="resetButton" onclick="reset()">New game</button>
 
   <!-- Message for duplicate numbers -->
   <p id="duplicateMessage" style="color: red"></p>
