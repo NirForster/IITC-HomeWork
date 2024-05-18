@@ -7,16 +7,16 @@
   </head>
   <body>
     <script>
-            //loops_nested_3
-            /*for (let i = 1; i <= 10; i++) {
+      //loops_nested_3
+      /*for (let i = 1; i <= 10; i++) {
                 let row = "";
                 for (let j = 1; j <= 10; j++) {
                   row += i * j + "\t";
                 }
                 console.log(row);
               }*/
-            //function_2_m
-            /*function WhoBigger(num1, num2) {
+      //function_2_m
+      /*function WhoBigger(num1, num2) {
               if (num1 > num2) {
                 return num1;
               } else {
@@ -24,8 +24,8 @@
               }
             }
             console.log(WhoBigger(5, 10));*/
-            //function_5_m
-            /*let number = 6
+      //function_5_m
+      /*let number = 6
             let sum = 0
             function SumUpTo(number) {
               for (let i = 0; i <= number; i++) {
@@ -34,8 +34,8 @@
               return sum
             }
             console.log(SumUpTo(number))*/
-            //function_7_m
-            /*function triangle(num) {
+      //function_7_m
+      /*function triangle(num) {
               let row = "";
               for (let i = 0; i <= num; i++) {
                 for (let j = 0; j <= i; j++) {
@@ -47,35 +47,98 @@
             }
             let num = prompt("enter a number: ");
             console.log(triangle(num));*/
-            //array_0.5_m
-            /*let sum = 0
+      //array_0.5_m
+      /*let sum = 0
             let num_array = [5,3,7,8,11]
             for (let i = 0; i < num_array.length; i++) {
               sum += num_array[i];
             }
             avearge = (sum /num_array.length)
             console.log("sum of the array is "+sum+" and the average is" +avearge)*/
-            //array_0.7_m
-            /*let names = ["ido", "guy", "bar", "noam", "arbel"]
+      //array_0.7_m
+      /*let names = ["ido", "guy", "bar", "noam", "arbel"]
             name_is = ""
             for (let i = 0; i < names.length; i++) {
               name_is += names[i] + "\n";
             }
             console.log(name_is)*/
-            //array_1_m
-            /*let array = [];
+      //array_1_m
+      /*let array = [];
             for (let i = 1; i <= 100; i++) {
             array.push(i);
             }
 
             console.log(array);*/
-            //array_2_m
-            function Two_Arrays() {
-                
-            }
 
+      //array_2_m
+      // let randomNumbersArr = [];
+      // function getRandomNumbersArr(randomNumbersArr) {
+      //   for (let i = 0; i < 5; i++) {
+      //     randomNumbersArr[i] = Math.floor(Math.random() * 100);
+      //   }
+      //   console.log(randomNumbersArr);
+      //   return randomNumbersArr;
+      // }
 
-     
+      // function getAverage(randomNumbersArr) {
+      //   let sum = randomNumbersArr[0]
+      //   for (let i = 1; i < randomNumbersArr.length; i++) {
+      //     sum += randomNumbersArr[i]
+      //   }
+      //   let average = sum / 5
+      //   return console.log(average);
+      // }
+      // let randomArr = getRandomNumbersArr(randomNumbersArr)
+      // getAverage(randomArr)
+
+      // array_2.5_m
+      // const numArr = [1, 2, 3, 4, 5];
+      // const num = 1;
+      // function checkForNum(numArr, num) {
+      //   for (let i = 0; i < numArr.length; i++) {
+      //     if (num === numArr[i]) {
+      //       return true;
+      //     }
+      //   }
+      //   return false;
+      // }
+      // console.log(checkForNum(numArr, num));
+
+      // array_2.7_m
+      // const arr1 = [1, 2, 3, 4, 5];
+      // const arr2 = [0, 1, 4, 8, 77];
+      // function countRepeatingNum(arr1, arr2) {
+      //   let count = 0;
+      //   for (let i = 0; i < arr1.length; i++) {
+      //     if (arr2.includes(arr1[i])) {
+      //       count++;
+      //     }
+      //   }
+      //   return count;
+      // }
+      // console.log(countRepeatingNum(arr1, arr2));
+
+      // array_4_m - אתגר
+      // function countUniqueElements(arr) {
+      //   const elementCount = {};
+      //   for (const element of arr) {
+      //     if (elementCount[element] !== undefined) {
+      //       elementCount[element]++;
+      //     } else {
+      //       elementCount[element] = 1;
+      //     }
+      //   }
+      //   let uniqueCount = 0;
+      //   for (const count in elementCount) {
+      //     if (elementCount[count] === 1) {
+      //       uniqueCount++;
+      //     }
+      //   }
+
+      //   return uniqueCount;
+      // }
+      // const array = [1, 6, 7, 6, 8, 1];
+      // console.log(countUniqueElements(array));
     </script>
   </body>
 </html>
